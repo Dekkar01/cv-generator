@@ -1,66 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div>
-        <!-- NAV -->
-        <nav>
-            <p>CV generator</p>
-        </nav>
-        <!-- PERSONAL INFO -->
-        <section id="personal-info">
-            <label for="info">Name: <input type="text" id="name" required></label>
-            <!-- Change later inputs -> dpodown list + button -->
-            <label for="telefon-one">Contacts: <input type="number" id="telefon-one" required></label>
-            <label for="telefon-optional">Contacts 2(optinal:): <input type="number" id="telefon-optional"></label>
-            <label for="email">Email: <input type="email" id="email" required></label>
-            <label for="github">Github: <input type="text" id="github"></label>
-            <label for="linkedin">Linkedin: <input type="text" id="linkedin"></label>
-        </section>
-        <!-- WORK EXPERIENCE|INFO ABOUT PREVIOUS WORK -->
-        <section id="experience-info">
-            <label for="company-name">Company name: <input type="text" id="company-name"></label>
-            <label for="start-year">Start: <input type="number" id="start-year"></label>
-            <label for="end-year">End: <input type="number" id="end-year"></label>
-        </section>
-        <!-- EDUCATION INFO -->
-        <section id="education-info">
-            <label for="university-name">University name: <input type="text" id="university-name"></label>
-            <label for="grade">Start: 
-                <select id="grade">
-                    <option value="">select</option>
-                    <option value="associate">Associate</option>
-                    <option value="bachelor">Bachelor</option>
-                    <option value="master">Master</option>
-                    <option value="doctor">Doctor</option>
-                </select>
+    <!-- NAV -->
+    <nav>
+        <p>CV generator</p>
+    </nav>
+
+    <div id="main">
+        <form method="post" action=''>
+            <!-- PERSONAL INFO -->
+            <fieldset id="personal-info">
+                <label for="info">Name: <input type="text" id="name" required></label>
+                <!-- Change later inputs -> dpodown list + button -->
+                <label for="telefon-one">Contacts: <input type="text" pattern="[789][0-9]{9}" id="telefon-one"
+                        required></label>
+                <label for="telefon-optional">Contacts 2(optinal:): <input type="text" pattern="[789][0-9]{9}"
+                        id="telefon-optional"></label>
+                <label for="email">Email: <input type="email" id="email" required></label>
+                <label for="github">Github: <input type="text" id="github"></label>
+                <label for="linkedin">Linkedin: <input type="text" id="linkedin"></label>
+            </fieldset>
+
+
+            <!-- WORK EXPERIENCE|INFO ABOUT PREVIOUS WORK -->
+            <fieldset id="experience-info">
+                <label for="company-name">Company name: <input type="text" id="company-name"></label>
+                <label for="start-year">Start: <input type="date" id="start-year"></label>
+                <label for="end-year">End: <input type="date" id="end-year"></label>
+            </fieldset>
+
+
+            <!-- EDUCATION INFO -->
+            <fieldset id="education-info">
+                <label for="university-name">University name: <input type="text" id="university-name"></label>
+                <label for="grade">Grade:
+                    <select id="grade">
+                        <option value="">select</option>
+                        <option value="associate">Associate</option>
+                        <option value="bachelor">Bachelor</option>
+                        <option value="master">Master</option>
+                        <option value="doctor">Doctor</option>
+                    </select>
+                </label>
+                <label for="end-uni-date">End: <input type="date" id="end-uni-date"></label>
+            </fieldset>
+
+
+            <!-- SKILLS -->
+            <fieldset id="skills-info">
+                <label for="skill-name">Skill: <input type="text" id="skill-name"></label>
+                <label for="skill-level">Start:
+                    <select id="skill-level">
+                        <option value="">select</option>
+                        <option value="associate">Associate</option>
+                        <option value="bachelor">Bachelor</option>
+                        <option value="master">Master</option>
+                        <option value="doctor">Doctor</option>
+                    </select>
+                </label>
+            </fieldset>
+
+
+            <!-- ABOUT INFO -->
+            <fieldset id="about-info">
+                <label for="bio">Provide a bio:
+                    <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+                </label>
+                <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+            </fieldset>
+
+
+            <!-- SUBMIT BTN -->
+
+            <label for="submit">
+                <input type="submit" id="submit"> Submit
             </label>
-            <label for="end-uni-date">End: <input type="number" id="end-uni-date"></label>
-        </section>
-        <!-- SKILLS -->
-        <section id="skills-info">
-            
-        </section>
-        <!-- ABOUT INFO -->
-        <section id="about-info">
-            <textarea name="about" id="about" placeholder="Tell smth about you"></textarea>
-        </section>
 
-        <!-- SUBMIT BTN -->
-        <section id="submit-btn">
-            <button type="submit">Create</button>
-        </section>
-        
-        <!-- FOOTER -->
-        <footer>
 
-        </footer>
+
+
+        </form>
     </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>All rights bla bla bla</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
+
 </html>
