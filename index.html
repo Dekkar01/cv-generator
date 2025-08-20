@@ -22,13 +22,25 @@
             <label for="github">Github: <input type="text" id="github"></label>
             <label for="linkedin">Linkedin: <input type="text" id="linkedin"></label>
         </section>
-        <!-- WORK EXPIRIENCE|INFO ABOUT PREVIOUS WORK -->
+        <!-- WORK EXPERIENCE|INFO ABOUT PREVIOUS WORK -->
         <section id="experience-info">
             <label for="company-name">Company name: <input type="text" id="company-name"></label>
+            <label for="start-year">Start: <input type="number" id="start-year"></label>
+            <label for="end-year">End: <input type="number" id="end-year"></label>
         </section>
         <!-- EDUCATION INFO -->
         <section id="education-info">
-            
+            <label for="university-name">University name: <input type="text" id="university-name"></label>
+            <label for="grade">Start: 
+                <select id="grade">
+                    <option value="">select</option>
+                    <option value="associate">Associate</option>
+                    <option value="bachelor">Bachelor</option>
+                    <option value="master">Master</option>
+                    <option value="doctor">Doctor</option>
+                </select>
+            </label>
+            <label for="end-uni-date">End: <input type="number" id="end-uni-date"></label>
         </section>
         <!-- SKILLS -->
         <section id="skills-info">
@@ -36,8 +48,14 @@
         </section>
         <!-- ABOUT INFO -->
         <section id="about-info">
-            
+            <textarea name="about" id="about" placeholder="Tell smth about you"></textarea>
         </section>
+
+        <!-- SUBMIT BTN -->
+        <section id="submit-btn">
+            <button type="submit">Create</button>
+        </section>
+        
         <!-- FOOTER -->
         <footer>
 
